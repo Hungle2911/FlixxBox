@@ -6,7 +6,7 @@ const apiKey = import.meta.env.VITE_API_KEY;
 const API = axios.create({
   baseURL,
 });
-
+console.log(baseURL)
 // Add a request interceptor to include the API key in every request
 API.interceptors.request.use(
   function (req) {
