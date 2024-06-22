@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom";
 const BackToHomepageBtn = () => {
   return (
     <div className="back">
-      <a className="btn" href="/">
+      <Link className="btn" to="/">
         Back To Movies
-      </a>
+      </Link>
     </div>
   );
 };

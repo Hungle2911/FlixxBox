@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import API from "../api/axios.config";
 import { Link } from "react-router-dom";
-import LoadingModal from "./LoadingModal";
 
 interface Movie {
   id: number;
@@ -38,7 +37,7 @@ const PopularMoviesList = () => {
             className="p-[5px] hover:transition-all hover:duration-[0.5s] hover:ease-[ease-in-out] hover:scale-105 bg-blue-700 hover:bg-blue-900"
             key={data.id}
           >
-            <Link to={`movie-details`}>
+            <Link to={`movie-details/${data.id}`}>
               {data.poster_path ? (
                 <img
                   src={`https://image.tmdb.org/t/p/w500/${data.poster_path}`}
