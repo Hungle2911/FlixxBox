@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import API from "../api/axios.config";
 
 interface Movie {
@@ -29,11 +29,11 @@ const PopularMoviesList = () => {
       <h2>Popular Movies</h2>
       <div
         id="popular-movies"
-        className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-5;"
+        className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-5"
       >
         {moviesData.map((data) => (
           <div
-            className="p-[5px] hover:transition-all hover:duration-[0.5s] hover:ease-[ease-in-out] hover:scale-105;"
+            className="p-[5px] hover:transition-all hover:duration-[0.5s] hover:ease-[ease-in-out] hover:scale-105 bg-blue-700 hover:bg-blue-900"
             key={data.id}
           >
             {/* <a href={`movie-details/${data.id}`}> */}
