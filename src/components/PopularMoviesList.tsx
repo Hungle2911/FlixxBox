@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import API from "../api/axios.config";
+import LoadingModal from "./LoadingModal";
 
 interface Movie {
   id: number;
