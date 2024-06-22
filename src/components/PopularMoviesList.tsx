@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import API from "../api/axios.config";
+import { Link } from "react-router-dom";
 import LoadingModal from "./LoadingModal";
 
 interface Movie {
@@ -37,21 +38,21 @@ const PopularMoviesList = () => {
             className="p-[5px] hover:transition-all hover:duration-[0.5s] hover:ease-[ease-in-out] hover:scale-105 bg-blue-700 hover:bg-blue-900"
             key={data.id}
           >
-            {/* <a href={`movie-details/${data.id}`}> */}
-            {data.poster_path ? (
-              <img
-                src={`https://image.tmdb.org/t/p/w500/${data.poster_path}`}
-                className="w-full"
-                alt={data.title}
-              />
-            ) : (
-              <img
-                src="../assets/no-image.jpg"
-                className="w-full"
-                alt={data.title}
-              />
-            )}
-            {/* </a> */}
+            <Link to={`movie-details`}>
+              {data.poster_path ? (
+                <img
+                  src={`https://image.tmdb.org/t/p/w500/${data.poster_path}`}
+                  className="w-full"
+                  alt={data.title}
+                />
+              ) : (
+                <img
+                  src="../assets/no-image.jpg"
+                  className="w-full"
+                  alt={data.title}
+                />
+              )}
+            </Link>
             <div className="card-body">
               <h5 className="card-title">{data.title}</h5>
               <p className="card-text">
