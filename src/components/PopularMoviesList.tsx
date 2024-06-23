@@ -26,7 +26,7 @@ const PopularMoviesList = () => {
   }, []);
 
   return (
-    <section className="max-w-[1200px] w-full mx-auto my-0 px-5 py-0;">
+    <>
       <h2>Popular Movies</h2>
       <div
         id="popular-movies"
@@ -63,7 +63,7 @@ const PopularMoviesList = () => {
           </div>
         ))}
       </div>
-    </section>
+    </>
   );
 };
 
