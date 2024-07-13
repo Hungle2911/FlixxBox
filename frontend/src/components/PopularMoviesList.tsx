@@ -1,14 +1,7 @@
 import { useEffect, useState } from "react";
 import API from "../api/axios.config";
 import { Link } from "react-router-dom";
-
-interface Movie {
-  id: number;
-  title: string;
-  poster_path: string | null;
-  release_date: string;
-}
-
+import { Movie } from "../type/types";
 const PopularMoviesList = () => {
   const [moviesData, setMoviesData] = useState<Movie[]>([]);
 

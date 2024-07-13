@@ -3,35 +3,10 @@ import { useParams } from "react-router-dom";
 import API from "../api/axios.config";
 import BackToHomepageBtn from "./BackToHomePageBtn";
 import LoadingModal from "./LoadingModal";
-
-interface Genre {
-  id: number;
-  name: string;
-}
-
-interface ProductionCompany {
-  id: number;
-  name: string;
-}
-
-interface MovieDetails {
-  poster_path: string;
-  title: string;
-  vote_average: number;
-  vote_count: number;
-  release_date: string;
-  overview: string;
-  genres: Genre[];
-  homepage: string;
-  budget: number;
-  revenue: number;
-  runtime: number;
-  status: string;
-  production_companies: ProductionCompany[];
-}
+import { MediaDetails } from "../type/types";
 
 const MovieDetails = () => {
-  const [movieDetailsData, setMovieDetailsData] = useState<MovieDetails | null>(
+  const [movieDetailsData, setMovieDetailsData] = useState<MediaDetails | null>(
     null
   );
   const [loading, setLoading] = useState(true);
