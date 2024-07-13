@@ -20,7 +20,6 @@ const PopularMoviesList = () => {
 
   return (
     <>
-      <h2>Popular Movies</h2>
       <div
         id="popular-movies"
         className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-5"
