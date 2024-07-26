@@ -1,4 +1,4 @@
-import PopularMoviesList from "../components/PopularMoviesList";
+import PopularMediaList from "../components/PopularMediaList";
 
 const HomeRoute = () => {
   return (
@@ -6,7 +6,7 @@ const HomeRoute = () => {
       <div className="flex flex-col items-center">
         <h2 className="text-3xl font-bold text-center my-3">Popular Movies</h2>
       </div>
-      <PopularMoviesList />
+      <PopularMediaList />
     </>
   );
 };
